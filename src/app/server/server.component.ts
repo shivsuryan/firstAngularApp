@@ -6,6 +6,22 @@ import { Component } from '@angular/core';
     templateUrl: './server.component.html'
 })
 export class ServerComponent {
+    userId: number = 100;
+    userName: string = '';
+
+
+    isUserNameEmpty() {
+        if (this.userName == null || this.userName === '') { return true; } else { return false; }
+    }
+    
+    userNameReset(event:Event){
+        this.userName='';
+    }
+
+
+
+
+
     serverId: number = 15;
     serverLocation: string = 'California';
     // this property is used to enable disable the button 

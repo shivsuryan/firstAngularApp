@@ -29,6 +29,7 @@ export class ServerComponent {
     serverCreationStatus: string = 'No new server was added.';
     serverName = '';
     displayServerStatus = false;
+    serverRunningStatus = '';
 
     constructor() {
         setTimeout(() => {
@@ -60,5 +61,13 @@ export class ServerComponent {
 
     getServerName() {
         return this.serverName;
+    }
+
+    getRunningStatus() {
+        return this.serverRunningStatus = Math.random() > 0.5 ? 'online' : 'offline';
+    }
+
+    getcolor() {
+        return this.serverRunningStatus === 'online' ? 'green' : 'red';
     }
 }

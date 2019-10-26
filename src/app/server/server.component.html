@@ -11,5 +11,5 @@
 <button class="btn btn-primary"
 [disabled]="!addNewserver" (click)="onaddServer()">AddNewServer</button>
 <p *ngIf="displayServerStatus">{{ getServerCreationStatus() }}</p>
-
+<p [ngStyle]="{backgroundColor: getcolor()}">ServerComponent - Server with id {{ serverId }} is {{ getRunningStatus() }}</p>
 <p>ServerComponent - Server with id {{ serverId }} running in location {{ getServerLocation() }}</p>

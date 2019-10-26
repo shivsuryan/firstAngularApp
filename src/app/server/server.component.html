@@ -10,6 +10,6 @@
 
 <button class="btn btn-primary"
 [disabled]="!addNewserver" (click)="onaddServer()">AddNewServer</button>
-<p>{{ getServerCreationStatus() }}</p>
+<p *ngIf="displayServerStatus">{{ getServerCreationStatus() }}</p>
 
 <p>ServerComponent - Server with id {{ serverId }} running in location {{ getServerLocation() }}</p>

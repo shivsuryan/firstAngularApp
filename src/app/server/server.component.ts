@@ -28,6 +28,7 @@ export class ServerComponent {
     addNewserver: boolean = false;
     serverCreationStatus: string = 'No new server was added.';
     serverName = '';
+    displayServerStatus = false;
 
     constructor() {
         setTimeout(() => {
@@ -40,6 +41,7 @@ export class ServerComponent {
     }
 
     onaddServer() {
+        this.displayServerStatus = true;
         this.serverCreationStatus = 'Server was added successfully';
     }
 

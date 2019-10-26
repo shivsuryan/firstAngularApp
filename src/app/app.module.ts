@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { LoginComponent } from './login/login.component';
+import { BackendComponent } from './backend/backend.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
     ServersComponent,
-    LoginComponent
+    LoginComponent,
+    BackendComponent
   ],
   imports: [
     BrowserModule,

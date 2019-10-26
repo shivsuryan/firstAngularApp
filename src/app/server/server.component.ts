@@ -11,6 +11,7 @@ export class ServerComponent {
     // this property is used to enable disable the button 
     addNewserver: boolean = false;
     serverCreationStatus: string = 'No new server was added.';
+    serverName = '';
 
     constructor() {
         setTimeout(() => {
@@ -32,5 +33,14 @@ export class ServerComponent {
 
     onNgInit() {
 
+    }
+
+    onUpdateServerName(event: any) {
+
+        this.serverName = event.target.value;
+    }
+
+    getServerName() {
+        return this.serverName;
     }
 }

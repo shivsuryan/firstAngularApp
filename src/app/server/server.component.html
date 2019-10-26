@@ -1,5 +1,5 @@
 <button class="btn btn-primary"
-[disabled]="!addNewserver"
->AddNewServer</button>
+[disabled]="!addNewserver" (click)="onaddServer()">AddNewServer</button>
+<p>{{ getServerCreationStatus() }}</p>
 
 <p>ServerComponent - Server with id {{ serverId }} running in location {{ getServerLocation() }}</p>

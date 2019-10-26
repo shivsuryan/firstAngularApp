@@ -10,6 +10,7 @@ export class ServerComponent {
     serverLocation: string = 'California';
     // this property is used to enable disable the button 
     addNewserver: boolean = false;
+    serverCreationStatus: string = 'No new server was added.';
 
     constructor() {
         setTimeout(() => {
@@ -19,5 +20,17 @@ export class ServerComponent {
 
     getServerLocation() {
         return this.serverLocation;
+    }
+
+    onaddServer() {
+        this.serverCreationStatus = 'Server was added successfully';
+    }
+
+    getServerCreationStatus() {
+        return this.serverCreationStatus;
+    }
+
+    onNgInit() {
+
     }
 }
